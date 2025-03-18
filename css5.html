@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS 5 Workshop</title>
+        <style>
+            /* Lösung zur Aufgabe */
+            @keyframes orange {
+                to {
+                   background: orange; 
+                }
+            }
+
+            .aufgabe {
+                animation: orange forwards 0s;
+            }
+
+            /* Container für Container-Query */
+            .container {
+                max-width: 400px;
+                background-color: lightgreen;
+                container-type: inline-size; 
+            }
+
+            .container-inhalt {
+                background-color: lightcoral;
+                margin: 4px;
+            }
+
+            @container (min-width: 400px) {
+                .container-inhalt {
+                    background-color: lightyellow;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS 5 Workshop</h1>
+        <h2>Cascade Layers</h2>
+        <h3>Aufgabe</h3>
+        <a href="https://codepen.io/Quentin_Albert/pen/yLxqdOv">Zur Aufgabe</a>
+        <h3>Lösung im CSS</h3>
+        <p class=aufgabe style="background: yellow">Hello</p>
+        <h3>Links</h3>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Cascade#which_css_entities_participate_in_the_cascade">Which CSS entities participate in the cascade</a></li>
+            <li><a href="https://css-tricks.com/css-cascade-layers/">Cascade Layers Guide</a></li>
+            <li><a href="https://developer.chrome.com/blog/cascade-layers?hl=de">Kaskadierungsebenen</a></li>
+            <li><a href="https://www.npmjs.com/package/@csstools/postcss-cascade-layers">PostCSS Cascade Layers</a></li>
+        </ul>
+        <h2>Container Queries</h2>
+        <p>Nehmen nicht wie media-Queries die Bildschirmbreite, sondern die Containerbreite.</p>
+        <p>@container (min-width: 786px) { ... }</p>
+        <h3>Beispiel</h3>
+        <div class="container">
+            Ich bin ein Container
+            <p class="container-inhalt">Ich befinde mich im Container</p>
+        </div>
+        <h3>Links</h3>
+        <ul>
+            <li><a href="https://github.com/GoogleChromeLabs/container-query-polyfill">Github: container-query-polyfill</a></li>
+            <li><a href="https://www.hosteurope.de/blog/exx-css-container-queries/">CSS Container Queries – das unabwendbare Ende von “Mobile First”</a></li>
+            <li><a href="https://web.dev/blog/cq-stable?hl=de">Containerabfragen landen in stabilen Browsern</a></li>
+            <li><a href="https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries/">A Primer On CSS Container Queries</a></li>
+            <li><a href="https://developer.chrome.com/blog/css-scroll-state-queries?hl=de">CSS scroll-state()</a></li>
+        </ul>
+        <h2>Nesting</h2>
+        Gibt es mittlerweile in CSS, aber die Abdeckung ist noch nicht gut. Außerdem wird BEM (Block-Element-Modifier) nicht unterstützt und wird es auch nie.
+    </body>
+</html>
